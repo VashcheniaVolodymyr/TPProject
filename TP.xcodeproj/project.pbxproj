@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3CF765292D480C00DBDADC /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = AF3CF764292D480C00DBDADC /* Realm */; };
+		AF3CF767292D480C00DBDADC /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = AF3CF766292D480C00DBDADC /* RealmSwift */; };
+		AF3CF76F292D5BF700DBDADC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3CF76E292D5BF700DBDADC /* Constants.swift */; };
 		AF99E74D292414B3008D6942 /* TPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99E74C292414B3008D6942 /* TPApp.swift */; };
-		AF99E74F292414B3008D6942 /* LoginScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99E74E292414B3008D6942 /* LoginScene.swift */; };
+		AF99E74F292414B3008D6942 /* SignInScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99E74E292414B3008D6942 /* SignInScene.swift */; };
 		AF99E751292414B4008D6942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF99E750292414B4008D6942 /* Assets.xcassets */; };
 		AF99E754292414B4008D6942 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF99E753292414B4008D6942 /* Preview Assets.xcassets */; };
 		AF99E75E292414B4008D6942 /* TPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99E75D292414B4008D6942 /* TPTests.swift */; };
@@ -20,7 +23,7 @@
 		AFD1779A292A97530060B6F2 /* Options+Nullable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD17799292A97530060B6F2 /* Options+Nullable.swift */; };
 		AFEAF6CA292427AB00FD25E9 /* TPIconTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEAF6C9292427AB00FD25E9 /* TPIconTextFiled.swift */; };
 		AFEAF6CC2924296700FD25E9 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEAF6CB2924296700FD25E9 /* Global.swift */; };
-		AFF4D383292D256600ACCD11 /* LoginSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4D382292D256600ACCD11 /* LoginSceneViewModel.swift */; };
+		AFF4D383292D256600ACCD11 /* SingInSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4D382292D256600ACCD11 /* SingInSceneViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,9 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF3CF76E292D5BF700DBDADC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AF99E749292414B3008D6942 /* TP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF99E74C292414B3008D6942 /* TPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPApp.swift; sourceTree = "<group>"; };
-		AF99E74E292414B3008D6942 /* LoginScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScene.swift; sourceTree = "<group>"; };
+		AF99E74E292414B3008D6942 /* SignInScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInScene.swift; sourceTree = "<group>"; };
 		AF99E750292414B4008D6942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF99E753292414B4008D6942 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF99E759292414B4008D6942 /* TPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +61,7 @@
 		AFD17799292A97530060B6F2 /* Options+Nullable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Options+Nullable.swift"; sourceTree = "<group>"; };
 		AFEAF6C9292427AB00FD25E9 /* TPIconTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPIconTextFiled.swift; sourceTree = "<group>"; };
 		AFEAF6CB2924296700FD25E9 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
-		AFF4D382292D256600ACCD11 /* LoginSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneViewModel.swift; sourceTree = "<group>"; };
+		AFF4D382292D256600ACCD11 /* SingInSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingInSceneViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF3CF767292D480C00DBDADC /* RealmSwift in Frameworks */,
+				AF3CF765292D480C00DBDADC /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +91,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF3CF768292D482B00DBDADC /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		AF3CF769292D486400DBDADC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF3CF76B292D494D00DBDADC /* Decodable */,
+				AF3CF76C292D495B00DBDADC /* Domain */,
+				AF3CF76D292D497900DBDADC /* Realm */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF3CF76B292D494D00DBDADC /* Decodable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Decodable;
+			sourceTree = "<group>";
+		};
+		AF3CF76C292D495B00DBDADC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AF3CF76D292D497900DBDADC /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		AF99E740292414B3008D6942 = {
 			isa = PBXGroup;
 			children = (
@@ -110,7 +154,9 @@
 			children = (
 				AF99E74C292414B3008D6942 /* TPApp.swift */,
 				AF99E750292414B4008D6942 /* Assets.xcassets */,
+				AF3CF768292D482B00DBDADC /* DomainLayer */,
 				AFD17796292A8D290060B6F2 /* Helpers */,
+				AF3CF769292D486400DBDADC /* Models */,
 				AFB33BAB292AE5E900C2B607 /* PresentationLayer */,
 				AF99E752292414B4008D6942 /* Preview Content */,
 				AFEAF6C82924277F00FD25E9 /* UIComponents */,
@@ -154,8 +200,8 @@
 		AFB33BAC292AE5F600C2B607 /* LoginScene */ = {
 			isa = PBXGroup;
 			children = (
-				AF99E74E292414B3008D6942 /* LoginScene.swift */,
-				AFF4D382292D256600ACCD11 /* LoginSceneViewModel.swift */,
+				AF99E74E292414B3008D6942 /* SignInScene.swift */,
+				AFF4D382292D256600ACCD11 /* SingInSceneViewModel.swift */,
 			);
 			path = LoginScene;
 			sourceTree = "<group>";
@@ -167,6 +213,7 @@
 				AFEAF6CB2924296700FD25E9 /* Global.swift */,
 				AFB33BAD292BB94F00C2B607 /* Image+Extension.swift */,
 				AFD17799292A97530060B6F2 /* Options+Nullable.swift */,
+				AF3CF76E292D5BF700DBDADC /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -196,6 +243,10 @@
 			dependencies = (
 			);
 			name = TP;
+			packageProductDependencies = (
+				AF3CF764292D480C00DBDADC /* Realm */,
+				AF3CF766292D480C00DBDADC /* RealmSwift */,
+			);
 			productName = TP;
 			productReference = AF99E749292414B3008D6942 /* TP.app */;
 			productType = "com.apple.product-type.application";
@@ -268,6 +319,9 @@
 				Base,
 			);
 			mainGroup = AF99E740292414B3008D6942;
+			packageReferences = (
+				AF3CF763292D480C00DBDADC /* XCRemoteSwiftPackageReference "realm-swift" */,
+			);
 			productRefGroup = AF99E74A292414B3008D6942 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -310,14 +364,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFF4D383292D256600ACCD11 /* LoginSceneViewModel.swift in Sources */,
+				AFF4D383292D256600ACCD11 /* SingInSceneViewModel.swift in Sources */,
 				AFD1779A292A97530060B6F2 /* Options+Nullable.swift in Sources */,
 				AFEAF6CC2924296700FD25E9 /* Global.swift in Sources */,
 				AFEAF6CA292427AB00FD25E9 /* TPIconTextFiled.swift in Sources */,
 				AFB33BAE292BB94F00C2B607 /* Image+Extension.swift in Sources */,
+				AF3CF76F292D5BF700DBDADC /* Constants.swift in Sources */,
 				AFD17794292A886A0060B6F2 /* TPButton.swift in Sources */,
 				AFD17798292A8D500060B6F2 /* Color+Extension.swift in Sources */,
-				AF99E74F292414B3008D6942 /* LoginScene.swift in Sources */,
+				AF99E74F292414B3008D6942 /* SignInScene.swift in Sources */,
 				AF99E74D292414B3008D6942 /* TPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -645,6 +700,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AF3CF763292D480C00DBDADC /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF3CF764292D480C00DBDADC /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3CF763292D480C00DBDADC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		AF3CF766292D480C00DBDADC /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AF3CF763292D480C00DBDADC /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AF99E741292414B3008D6942 /* Project object */;
 }
