@@ -57,7 +57,7 @@ struct LoginScene: View {
                 .bold()
                 .foregroundColor(.white)
                 .font(.title)
-            Text("Create an account to get started")
+            Text("Create an account to get started.")
                 .font(.caption)
                 .bold()
                 .foregroundColor(Color.tpLigthGray)
