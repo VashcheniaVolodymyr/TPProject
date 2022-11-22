@@ -66,9 +66,7 @@ struct TPButton: View {
     
     private var textButtonView: some View {
         baseButton
-            .frame(width: 312, height: 48)
-            .fixedSize()
-            .border(Color.tpPurple)
+            .foregroundColor(.white)
             .cornerRadius(8)
     }
     
@@ -79,7 +77,7 @@ struct TPButton: View {
     
     private var textComponent: some View {
         Text(config.title)
-            .foregroundColor(.tpLigthGray)
+            .foregroundColor(.white)
             .bold()
             .frame(width: 60, height: 24)
     }

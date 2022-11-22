@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct TP {
     struct SingInScene {
@@ -23,6 +24,15 @@ struct TP {
             enum Buttons {
                 static let singIn = "Sing in"
                 static let singUp = "Sing up"
+            }
+            
+            enum TextFields {
+                static let emailPlaceholder = "Your email"
+                static let passwordPlaceholder = "Your password"
+                static let emailImageInActive = Image.emailIconInActive
+                static let emailImageInDisabled = Image.emailIconDisabled
+                static let passwordImageInActive = Image.passwordIconInActive
+                static let passwordImageInDisabled = Image.passwordIconInDisabled
             }
             
         }

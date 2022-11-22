@@ -103,9 +103,7 @@ struct SingInScene<ViewModel: SingInSceneVMP>: View {
             Text("or")
                 .bold()
                 .foregroundColor(.tpLigthGray)
-            Text("Sing in")
-                .bold()
-                .foregroundColor(.white)
+            TPButton(config: viewModel.singInTextButtonConfig, style: .textButton)
         }
     }
     
