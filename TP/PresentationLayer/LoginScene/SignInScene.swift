@@ -7,9 +7,18 @@
 
 import SwiftUI
 
-struct LoginScene: View {
+protocol SingInSceneVMP: ObservableObject {
+    var title: String { get }
+    var subTitle: String { get }
+    var loginTextFieldConfig: TPIconTextFiled.Config { get }
+    var passwordTextFieldConfig: TPIconTextFiled.Config { get }
+    var singInDeepColorButtonConfig: TPButton.Config { get }
+    var singInTextButtonConfig: TPButton.Config { get }
+}
+
+struct SingInScene<ViewModel: SingInSceneVMP>: View {
     
-    @State var textLogin: Binding<String> = .constant("")
+    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         Color.tpDarkGray
@@ -53,11 +62,11 @@ struct LoginScene: View {
     
     private var welkomeTextComponents: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text("Welkome!")
+            Text(viewModel.title)
                 .bold()
                 .foregroundColor(.white)
                 .font(.title)
-            Text("Create an account to get started.")
+            Text(viewModel.subTitle)
                 .font(.caption)
                 .bold()
                 .foregroundColor(Color.tpLigthGray)
@@ -79,14 +88,14 @@ struct LoginScene: View {
     }
     
     private var loginConponent: some View {
-        TPIconTextFiled(config: .init(placeholder: "Login", image: .emailIconDisabled, text: textLogin))
+        TPIconTextFiled(config: viewModel.loginTextFieldConfig)
     }
     private var passwordConponent: some View {
-        TPIconTextFiled(config: .init(placeholder: "Your password", image: .passwordIconInDisabled, text: textLogin))
+        TPIconTextFiled(config: viewModel.passwordTextFieldConfig)
     }
     
     private var singUpComponent: some View {
-        TPButton(config: .init(title: "Sing up", action: nil), style: .deepColorButton)
+        TPButton(config: viewModel.singInDeepColorButtonConfig, style: .deepColorButton)
     }
     
     private var singInComponent: some View {

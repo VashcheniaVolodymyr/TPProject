@@ -11,13 +11,15 @@ struct TPIconTextFiled: View {
     struct Config {
         let placeholder: String
         let image: Image
-        var text: Binding<String>
+        var text: Binding<String>?
         
-        init(placeholder: String, image: Image, text: Binding<String>) {
+        init(placeholder: String, image: Image, text: Binding<String>?) {
             self.placeholder = placeholder
             self.image = image
             self.text = text
         }
+        
+        static let empty = TPIconTextFiled.Config(placeholder: "", image: Image(uiImage: .init()), text: .constant(""))
     }
 
     
@@ -46,7 +48,7 @@ struct TPIconTextFiled: View {
     }
     
     private var textFiledComponent: some View {
-        TextField(text: config.text, axis: .horizontal, label: {
+        TextField(text: config.text ?? .constant(""), axis: .horizontal, label: {
             placeholterComponent
         })
         .font(.callout)

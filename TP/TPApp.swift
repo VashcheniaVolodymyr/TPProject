@@ -11,7 +11,7 @@ import SwiftUI
 struct TPApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginScene()
+            SingInScene(viewModel: SingInSceneViewModel())
         }
     }
 }

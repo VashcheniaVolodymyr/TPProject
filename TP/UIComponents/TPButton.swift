@@ -22,6 +22,8 @@ struct TPButton: View {
             self.init(title: title, action: action)
             self.image = image
         }
+        
+        static let empty: TPButton.Config = .init(title: "", action: nil)
     }
     
     enum Style {
