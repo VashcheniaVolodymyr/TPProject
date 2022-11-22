@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:"
+      name = "TP">
+      <FileRef
+         location = "group:TP.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:TP.xcworkspace">
+      </FileRef>
+      <Group
+         location = "group:Images"
+         name = "Images">
+         <FileRef
+            location = "group:rick-y-morty-paisaje-6534.png">
+         </FileRef>
+         <FileRef
+            location = "group:ShapeInActive.png">
+         </FileRef>
+         <FileRef
+            location = "group:Rectangle 3.png">
+         </FileRef>
+         <FileRef
+            location = "group:Shape.png">
+         </FileRef>
+         <FileRef
+            location = "group:email_icon.png">
+         </FileRef>
+         <FileRef
+            location = "group:PickAndMortyIcon.png">
+         </FileRef>
+         <FileRef
+            location = "group:steam.dmg">
+         </FileRef>
+         <FileRef
+            location = "group:PasswordIconInActive.png">
+         </FileRef>
+         <FileRef
+            location = "group:TP.zip">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:TPTests"
+         name = "TPTests">
+         <FileRef
+            location = "group:TPTests.swift">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:TPUITests"
+         name = "TPUITests">
+         <FileRef
+            location = "group:TPUITestsLaunchTests.swift">
+         </FileRef>
+         <FileRef
+            location = "group:TPUITests.swift">
+         </FileRef>
+      </Group>
+   </Group>
+</Workspace>

@@ -8,12 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		AF99E74D292414B3008D6942 /* TPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99E74C292414B3008D6942 /* TPApp.swift */; };
-		AF99E74F292414B3008D6942 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99E74E292414B3008D6942 /* ContentView.swift */; };
+		AF99E74F292414B3008D6942 /* LoginScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99E74E292414B3008D6942 /* LoginScene.swift */; };
 		AF99E751292414B4008D6942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF99E750292414B4008D6942 /* Assets.xcassets */; };
 		AF99E754292414B4008D6942 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF99E753292414B4008D6942 /* Preview Assets.xcassets */; };
 		AF99E75E292414B4008D6942 /* TPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99E75D292414B4008D6942 /* TPTests.swift */; };
 		AF99E768292414B4008D6942 /* TPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99E767292414B4008D6942 /* TPUITests.swift */; };
 		AF99E76A292414B4008D6942 /* TPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99E769292414B4008D6942 /* TPUITestsLaunchTests.swift */; };
+		AFB33BAE292BB94F00C2B607 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB33BAD292BB94F00C2B607 /* Image+Extension.swift */; };
+		AFD17794292A886A0060B6F2 /* TPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD17793292A886A0060B6F2 /* TPButton.swift */; };
+		AFD17798292A8D500060B6F2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD17797292A8D500060B6F2 /* Color+Extension.swift */; };
+		AFD1779A292A97530060B6F2 /* Options+Nullable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD17799292A97530060B6F2 /* Options+Nullable.swift */; };
+		AFEAF6CA292427AB00FD25E9 /* TPIconTextFiled.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEAF6C9292427AB00FD25E9 /* TPIconTextFiled.swift */; };
+		AFEAF6CC2924296700FD25E9 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEAF6CB2924296700FD25E9 /* Global.swift */; };
+		AFF4D383292D256600ACCD11 /* LoginSceneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF4D382292D256600ACCD11 /* LoginSceneViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +43,7 @@
 /* Begin PBXFileReference section */
 		AF99E749292414B3008D6942 /* TP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF99E74C292414B3008D6942 /* TPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPApp.swift; sourceTree = "<group>"; };
-		AF99E74E292414B3008D6942 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		AF99E74E292414B3008D6942 /* LoginScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginScene.swift; sourceTree = "<group>"; };
 		AF99E750292414B4008D6942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF99E753292414B4008D6942 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AF99E759292414B4008D6942 /* TPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +51,13 @@
 		AF99E763292414B4008D6942 /* TPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF99E767292414B4008D6942 /* TPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPUITests.swift; sourceTree = "<group>"; };
 		AF99E769292414B4008D6942 /* TPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AFB33BAD292BB94F00C2B607 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
+		AFD17793292A886A0060B6F2 /* TPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPButton.swift; sourceTree = "<group>"; };
+		AFD17797292A8D500060B6F2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		AFD17799292A97530060B6F2 /* Options+Nullable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Options+Nullable.swift"; sourceTree = "<group>"; };
+		AFEAF6C9292427AB00FD25E9 /* TPIconTextFiled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPIconTextFiled.swift; sourceTree = "<group>"; };
+		AFEAF6CB2924296700FD25E9 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		AFF4D382292D256600ACCD11 /* LoginSceneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSceneViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +109,11 @@
 			isa = PBXGroup;
 			children = (
 				AF99E74C292414B3008D6942 /* TPApp.swift */,
-				AF99E74E292414B3008D6942 /* ContentView.swift */,
 				AF99E750292414B4008D6942 /* Assets.xcassets */,
+				AFD17796292A8D290060B6F2 /* Helpers */,
+				AFB33BAB292AE5E900C2B607 /* PresentationLayer */,
 				AF99E752292414B4008D6942 /* Preview Content */,
+				AFEAF6C82924277F00FD25E9 /* UIComponents */,
 			);
 			path = TP;
 			sourceTree = "<group>";
@@ -125,6 +141,43 @@
 				AF99E769292414B4008D6942 /* TPUITestsLaunchTests.swift */,
 			);
 			path = TPUITests;
+			sourceTree = "<group>";
+		};
+		AFB33BAB292AE5E900C2B607 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				AFB33BAC292AE5F600C2B607 /* LoginScene */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		AFB33BAC292AE5F600C2B607 /* LoginScene */ = {
+			isa = PBXGroup;
+			children = (
+				AF99E74E292414B3008D6942 /* LoginScene.swift */,
+				AFF4D382292D256600ACCD11 /* LoginSceneViewModel.swift */,
+			);
+			path = LoginScene;
+			sourceTree = "<group>";
+		};
+		AFD17796292A8D290060B6F2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AFD17797292A8D500060B6F2 /* Color+Extension.swift */,
+				AFEAF6CB2924296700FD25E9 /* Global.swift */,
+				AFB33BAD292BB94F00C2B607 /* Image+Extension.swift */,
+				AFD17799292A97530060B6F2 /* Options+Nullable.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AFEAF6C82924277F00FD25E9 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				AFEAF6C9292427AB00FD25E9 /* TPIconTextFiled.swift */,
+				AFD17793292A886A0060B6F2 /* TPButton.swift */,
+			);
+			path = UIComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +310,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF99E74F292414B3008D6942 /* ContentView.swift in Sources */,
+				AFF4D383292D256600ACCD11 /* LoginSceneViewModel.swift in Sources */,
+				AFD1779A292A97530060B6F2 /* Options+Nullable.swift in Sources */,
+				AFEAF6CC2924296700FD25E9 /* Global.swift in Sources */,
+				AFEAF6CA292427AB00FD25E9 /* TPIconTextFiled.swift in Sources */,
+				AFB33BAE292BB94F00C2B607 /* Image+Extension.swift in Sources */,
+				AFD17794292A886A0060B6F2 /* TPButton.swift in Sources */,
+				AFD17798292A8D500060B6F2 /* Color+Extension.swift in Sources */,
+				AF99E74F292414B3008D6942 /* LoginScene.swift in Sources */,
 				AF99E74D292414B3008D6942 /* TPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +485,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,6 +515,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

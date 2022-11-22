@@ -1,6 +1,7 @@
 {
-  "colors" : [
+  "images" : [
     {
+      "filename" : "PasswordIconInActive.png",
       "idiom" : "universal"
     }
   ],
