@@ -1,8 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "email_icon.png",
-      "idiom" : "iphone"
+      "filename" : "EmailIconDisabled.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

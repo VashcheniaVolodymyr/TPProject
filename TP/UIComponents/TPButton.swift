@@ -78,8 +78,9 @@ struct TPButton: View {
     private var textComponent: some View {
         Text(config.title)
             .foregroundColor(.white)
-            .bold()
             .frame(width: 60, height: 24)
+            .font(.gilroyMedium14)
+            .bold()
     }
     
     private func action() {

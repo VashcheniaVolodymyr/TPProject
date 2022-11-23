@@ -10,8 +10,8 @@ import SwiftUI
 protocol SingInSceneVMP: ObservableObject {
     var title: String { get }
     var subTitle: String { get }
-    var loginTextFieldConfig: TPIconTextFiled.Config { get }
-    var passwordTextFieldConfig: TPIconTextFiled.Config { get }
+    var loginTextFieldConfig: TPIconTextField.Config { get }
+    var passwordTextFieldConfig: TPIconTextField.Config { get }
     var singInDeepColorButtonConfig: TPButton.Config { get }
     var singInTextButtonConfig: TPButton.Config { get }
 }
@@ -63,11 +63,11 @@ struct SingInScene<ViewModel: SingInSceneVMP>: View {
     private var welkomeTextComponents: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(viewModel.title)
-                .bold()
                 .foregroundColor(.white)
-                .font(.title)
+                .font(.gilroyBold)
+                .bold()
             Text(viewModel.subTitle)
-                .font(.caption)
+                .font(.gilroyMedium12)
                 .bold()
                 .foregroundColor(Color.tpLigthGray)
         }
@@ -88,10 +88,10 @@ struct SingInScene<ViewModel: SingInSceneVMP>: View {
     }
     
     private var loginConponent: some View {
-        TPIconTextFiled(config: viewModel.loginTextFieldConfig)
+        TPIconTextField(style: .login, config: viewModel.loginTextFieldConfig)
     }
     private var passwordConponent: some View {
-        TPIconTextFiled(config: viewModel.passwordTextFieldConfig)
+        TPIconTextField(style: .password, config: viewModel.passwordTextFieldConfig)
     }
     
     private var singUpComponent: some View {
@@ -99,10 +99,11 @@ struct SingInScene<ViewModel: SingInSceneVMP>: View {
     }
     
     private var singInComponent: some View {
-        HStack {
+        HStack(alignment: .center, spacing: 8){
             Text("or")
-                .bold()
+                .font(.gilroyReqular14)
                 .foregroundColor(.tpLigthGray)
+            
             TPButton(config: viewModel.singInTextButtonConfig, style: .textButton)
         }
     }

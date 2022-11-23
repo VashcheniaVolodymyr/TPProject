@@ -19,8 +19,8 @@ final class SingInSceneViewModel: SingInSceneVMP {
     // MARK: Public proporties
     @Published var title: String = ""
     @Published var subTitle: String = ""
-    @Published var loginTextFieldConfig: TPIconTextFiled.Config = .empty
-    @Published var passwordTextFieldConfig: TPIconTextFiled.Config = .empty
+    @Published var loginTextFieldConfig: TPIconTextField.Config = .empty
+    @Published var passwordTextFieldConfig: TPIconTextField.Config = .empty
     @Published var singInDeepColorButtonConfig: TPButton.Config = .empty
     @Published var singInTextButtonConfig: TPButton.Config = .empty
     
@@ -69,10 +69,10 @@ final class SingInSceneViewModel: SingInSceneVMP {
        return .init(title: title, action: signInTextButtonTapAction())
     }
     
-    func getLoginTextFieldConfig() -> TPIconTextFiled.Config {
+    func getLoginTextFieldConfig() -> TPIconTextField.Config {
         let placeholder = Constants.TextFields.emailPlaceholder
         let image = Constants.TextFields.emailImageInDisabled
-        let config: TPIconTextFiled.Config = .init(
+        let config: TPIconTextField.Config = .init(
             placeholder: placeholder,
             image: image,
             text: nil
@@ -80,10 +80,10 @@ final class SingInSceneViewModel: SingInSceneVMP {
         return config
     }
     
-    func getPasswordTextFieldConfig() -> TPIconTextFiled.Config {
+    func getPasswordTextFieldConfig() -> TPIconTextField.Config {
         let placeholder = Constants.TextFields.passwordPlaceholder
         let image = Constants.TextFields.passwordImageInDisabled
-        let config: TPIconTextFiled.Config = .init(
+        let config: TPIconTextField.Config = .init(
             placeholder: placeholder,
             image: image,
             text: nil
