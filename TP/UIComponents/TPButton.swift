@@ -30,7 +30,7 @@ struct TPButton: View {
         case deepColorButton
         case textButton
     }
-
+    
     let config: Config
     let style: Style
     
@@ -59,8 +59,8 @@ struct TPButton: View {
     
     private var deepButtonView: some View {
         baseButton
-            .frame(width: 355, height: 48)
-            .background(config.action.isNil ? Color.tpPurple : Color.tpLigthGray)
+            .frame(minWidth: 40, maxWidth: .infinity, minHeight: 48, maxHeight: 48)
+            .background(config.action.isNil ? Color.tpPurple : Color.tpPurpleLigth)
             .cornerRadius(8)
     }
     
@@ -77,8 +77,8 @@ struct TPButton: View {
     
     private var textComponent: some View {
         Text(config.title)
-            .foregroundColor(.white)
-            .frame(width: 60, height: 24)
+            .foregroundColor(getForegroundColor())
+            .frame(height: 24)
             .font(.gilroyMedium14)
             .bold()
     }
@@ -86,5 +86,14 @@ struct TPButton: View {
     private func action() {
         guard let action = config.action else { return }
         action()
+    }
+    
+    private func getForegroundColor() -> Color {
+        switch style {
+        case .deepColorButton:
+            return config.action.isNil ? Color.tpTextMidGray : Color.white
+        case .textButton:
+            return Color.white
+        }
     }
 }

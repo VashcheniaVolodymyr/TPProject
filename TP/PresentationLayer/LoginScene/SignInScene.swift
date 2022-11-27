@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 protocol SingInSceneVMP: ObservableObject {
     var title: String { get }
@@ -14,6 +15,8 @@ protocol SingInSceneVMP: ObservableObject {
     var passwordTextFieldConfig: TPIconTextField.Config { get }
     var singInDeepColorButtonConfig: TPButton.Config { get }
     var singInTextButtonConfig: TPButton.Config { get }
+    var emailText: String { get set }
+    var passwordText: String { get set }
 }
 
 struct SingInScene<ViewModel: SingInSceneVMP>: View {
@@ -75,23 +78,23 @@ struct SingInScene<ViewModel: SingInSceneVMP>: View {
     
     private var textFieldsComponents: some View {
         VStack(alignment: .leading, spacing: 25) {
-            loginConponent
+            loginComponent
             passwordConponent
         }
     }
     
     private var buttonsComponents: some View {
-        VStack(alignment: .center, spacing: 25) {
+        VStack(alignment: .leading, spacing: 25) {
             singUpComponent
             singInComponent
         }
     }
     
-    private var loginConponent: some View {
-        TPIconTextField(style: .login, config: viewModel.loginTextFieldConfig)
+    private var loginComponent: some View {
+        TPIconTextField(text: $viewModel.emailText, style: .login, config: viewModel.loginTextFieldConfig)
     }
     private var passwordConponent: some View {
-        TPIconTextField(style: .password, config: viewModel.passwordTextFieldConfig)
+        TPIconTextField(text: $viewModel.passwordText, style: .password, config: viewModel.passwordTextFieldConfig)
     }
     
     private var singUpComponent: some View {

@@ -6,23 +6,29 @@
 //
 
 import SwiftUI
-import Foundation
 
 struct TPIconTextField: View {
     typealias IconFrame = (width: CGFloat, height: CGFloat)
+    typealias ImageSet = (editing: Image, normal: Image)
+    
+    @Binding var text: String
+    @FocusState var isFocused: Bool
     
     struct Config {
         let placeholder: String
-        let image: Image
-        var text: Binding<String>?
+        let imageSet: ImageSet
         
-        init(placeholder: String, image: Image, text: Binding<String>?) {
+        init(placeholder: String, imageSet: ImageSet) {
             self.placeholder = placeholder
-            self.image = image
-            self.text = text
+            self.imageSet = imageSet
         }
         
-        static let empty = TPIconTextField.Config(placeholder: "", image: Image(uiImage: .init()), text: .constant(""))
+        static let empty = TPIconTextField.Config(placeholder: "", imageSet: (Image(uiImage: .init()), Image(uiImage: .init())))
+    }
+    
+    enum StateTextField {
+        case valid
+        case invalid
     }
     
     enum Style {
@@ -34,34 +40,61 @@ struct TPIconTextField: View {
     let config: Config
     
     var body: some View {
+        textFieldView
+    }
+    
+    init(text: Binding<String>, style: Style, config: Config) {
+        self.style = style
+        self.config = config
+        self._text = text
+    }
+    
+    private var textFieldView: some View {
         HStack {
             iconComponent
                 .padding(16)
-                .foregroundColor(.tpPurple)
-            textFieldComponent
+            switch style {
+            case .password: secureFieldComponent
+            case .login: textFieldComponent
+            }
         }
+        .foregroundColor(.white)
         .background(Color.tpMidGray)
         .frame(height: 48)
         .cornerRadius(8)
-    }
-    
-    init(style: Style, config: Config) {
-        self.style = style
-        self.config = config
+        .overlay(
+            RoundedRectangle(cornerRadius: 8)
+                .stroke(getColorBorder(), lineWidth: 1)
+        )
     }
     
     private var iconComponent: some View {
-        config.image
+        imageView
             .resizable()
             .frame(width: getIconFrame().width, height: getIconFrame().height)
             .scaledToFill()
     }
     
+    private var imageView: Image {
+        if !isFocused && text.isNotEmpty {
+           return config.imageSet.editing
+        } else {
+           return isFocused ? config.imageSet.editing : config.imageSet.normal
+        }
+    }
+    
     private var textFieldComponent: some View {
-        TextField(text: config.text ?? .constant(""), axis: .horizontal, label: {
-            placeholterComponent
-        })
-        .font(.callout)
+        TextField(config.placeholder, text: self.$text)
+        .focused($isFocused)
+        .font(Font.gilroyMedium14)
+        .bold()
+    }
+    
+    private var secureFieldComponent: some View {
+        SecureField(config.placeholder, text: self.$text)
+        .focused($isFocused)
+        .font(Font.gilroyMedium14)
+        .bold()
     }
     
     private var placeholterComponent: some View {
@@ -69,6 +102,7 @@ struct TPIconTextField: View {
             .foregroundColor(.tpTextMidGray)
             .frame(width: 100, height: 24)
             .font(Font.gilroyMedium14)
+            .bold()
     }
 }
 
@@ -82,5 +116,10 @@ extension TPIconTextField {
             frame = IconFrame(width: 16, height: 16)
         }
         return frame
+    }
+    
+    private func getColorBorder() -> Color {
+        if !isFocused && text.isNotEmpty { return Color.tpMidGray }
+        return isFocused ? Color.tpPurpleLigth : Color.tpMidGray
     }
 }
