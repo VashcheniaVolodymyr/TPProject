@@ -6,43 +6,52 @@
 //
 
 import SwiftUI
+import Combine
 
 protocol SingInSceneVMP: ObservableObject {
     var title: String { get }
     var subTitle: String { get }
-    var loginTextFieldConfig: TPIconTextFiled.Config { get }
-    var passwordTextFieldConfig: TPIconTextFiled.Config { get }
+    var loginTextFieldConfig: TPIconTextField.Config { get }
+    var passwordTextFieldConfig: TPIconTextField.Config { get }
     var singInDeepColorButtonConfig: TPButton.Config { get }
     var singInTextButtonConfig: TPButton.Config { get }
+    var emailText: String { get set }
+    var passwordText: String { get set }
+    var singInButtonTapped: Bool { get set }
 }
 
 struct SingInScene<ViewModel: SingInSceneVMP>: View {
+    @Namespace private var animation
+    @State private var isFlipped = false
     
     @ObservedObject var viewModel: ViewModel
     
     var body: some View {
-        Color.tpDarkGray
-            .frame(
-                maxWidth: UIScreen.main.bounds.width,
-                maxHeight: UIScreen.main.bounds.height
-            )
-            .overlay(
+        ZStack {
+            Rectangle()
+                .fill(Color.tpDarkGray)
+                .ignoresSafeArea()
+            
+            VStack(alignment: .leading) {
+                loginImageComponent
+                Color.tpDarkGray
                 VStack(alignment: .leading) {
-                    loginImageComponent
-                    Color.tpDarkGray
-                    VStack(alignment: .leading) {
-                        welkomeTextComponents
-                            .padding(.bottom, 30)
-                        textFieldsComponents
-                            .padding(.bottom, 40)
-                        buttonsComponents
-                            .padding(.bottom, 40)
-                    }
-                    .padding(.all)
-                }.frame(width: UIScreen.main.bounds.width)
-                
-            )
-            .background(Color.tpDarkGray)
+                    welkomeTextComponents
+                        .padding(.bottom, 30)
+                    textFieldsComponents
+                        .padding(.bottom, 40)
+                    buttonsComponents
+                        .padding(.bottom, 40)
+                }
+                .padding(.all)
+            }
+            .onTapGesture {
+                hideKeyboard()
+            }
+            .fullScreenCover(isPresented: $viewModel.singInButtonTapped) {
+                CharacterScene(viewModel: CharacterSceneViewModel())
+            }
+        }
     }
     
     private var loginImageComponent: some View {
@@ -63,11 +72,11 @@ struct SingInScene<ViewModel: SingInSceneVMP>: View {
     private var welkomeTextComponents: some View {
         VStack(alignment: .leading, spacing: 4) {
             Text(viewModel.title)
-                .bold()
                 .foregroundColor(.white)
-                .font(.title)
+                .font(.gilroyBold)
+                .bold()
             Text(viewModel.subTitle)
-                .font(.caption)
+                .font(.gilroyMedium12)
                 .bold()
                 .foregroundColor(Color.tpLigthGray)
         }
@@ -75,23 +84,34 @@ struct SingInScene<ViewModel: SingInSceneVMP>: View {
     
     private var textFieldsComponents: some View {
         VStack(alignment: .leading, spacing: 25) {
-            loginConponent
+            loginComponent
             passwordConponent
         }
     }
     
     private var buttonsComponents: some View {
-        VStack(alignment: .center, spacing: 25) {
-            singUpComponent
-            singInComponent
+        ZStack {
+            VStack(alignment: .center, spacing: 10) {
+                if isFlipped {
+                    singUpComponent
+                        .matchedGeometryEffect(id: "Shape", in: animation)
+                    singInComponent
+                        .matchedGeometryEffect(id: "AlbumTitle", in: animation)
+                } else {
+                    singUpComponent
+                        .matchedGeometryEffect(id: "AlbumTitle", in: animation)
+                    singInComponent
+                        .matchedGeometryEffect(id: "Shape", in: animation)
+                }
+            }
         }
     }
     
-    private var loginConponent: some View {
-        TPIconTextFiled(config: viewModel.loginTextFieldConfig)
+    private var loginComponent: some View {
+        TPIconTextField(text: $viewModel.emailText, style: .login, config: viewModel.loginTextFieldConfig)
     }
     private var passwordConponent: some View {
-        TPIconTextFiled(config: viewModel.passwordTextFieldConfig)
+        TPIconTextField(text: $viewModel.passwordText, style: .password, config: viewModel.passwordTextFieldConfig)
     }
     
     private var singUpComponent: some View {
@@ -99,12 +119,23 @@ struct SingInScene<ViewModel: SingInSceneVMP>: View {
     }
     
     private var singInComponent: some View {
-        HStack {
+        HStack(alignment: .center, spacing: 8){
             Text("or")
-                .bold()
+                .font(.gilroyReqular14)
                 .foregroundColor(.tpLigthGray)
-            TPButton(config: viewModel.singInTextButtonConfig, style: .textButton)
+            
+            TPButton(config: viewModel.singInTextButtonConfig, style: .textButton) {
+                withAnimation(.linear) {
+                    isFlipped.toggle()
+                }
+            }
         }
+        .frame(minWidth: 40, maxWidth: .infinity, minHeight: 48, maxHeight: 48)
     }
-    
+}
+
+struct SingInScene_Previews: PreviewProvider {
+    static var previews: some View {
+       SingInScene(viewModel: SingInSceneViewModel())
+    }
 }

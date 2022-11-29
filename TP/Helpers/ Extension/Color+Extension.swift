@@ -12,4 +12,6 @@ extension Color {
     static let tpLigthGray = Color("TPLightGray")
     static let tpPurple = Color("TPPurple")
     static let tpPurpleLigth = Color("TPPurpleLigth")
+    
+    static let tpTextMidGray = Color(red: 0.529, green: 0.514, blue: 0.533)
 }
