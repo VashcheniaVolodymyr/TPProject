@@ -23,6 +23,7 @@ enum SignInFieldsStatus {
 
 final class SingInSceneViewModel: SingInSceneVMP {
     typealias Constants = TP.SingInScene.Constants
+    
     // MARK: Public proporties
     @Published var title: String = ""
     @Published var subTitle: String = ""
@@ -34,6 +35,7 @@ final class SingInSceneViewModel: SingInSceneVMP {
     @Published var emailText: String = ""
     @Published var passwordText: String = ""
     @Published var textFieldsStatus: SignInFieldsStatus = .allNotFilled
+    @Published var singInButtonTapped: Bool = false
     
     // MARK: Private proporties
     @Published private var singInState: SingInState = .signUp
@@ -95,7 +97,7 @@ final class SingInSceneViewModel: SingInSceneVMP {
     }
     
     private func signInTextButtonTapAction() -> VoidHandler {
-        let action: VoidHandler = {
+        let action: VoidHandler = { [unowned self] in
             switch self.singInState {
             case .signIn:
                 self.singInState = .signUp
@@ -107,7 +109,9 @@ final class SingInSceneViewModel: SingInSceneVMP {
     }
     
     private func signInDeepButtonTapAction() -> VoidHandler {
-        let action: VoidHandler = {}
+        let action: VoidHandler = {
+            self.singInButtonTapped = true
+        }
         return action
     }
 }

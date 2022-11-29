@@ -99,7 +99,7 @@ struct TPIconTextField: View {
     
     private var placeholterComponent: some View {
         Text(config.placeholder)
-            .foregroundColor(.tpTextMidGray)
+            .foregroundColor(.tpLigthGray)
             .frame(width: 100, height: 24)
             .font(Font.gilroyMedium14)
             .bold()

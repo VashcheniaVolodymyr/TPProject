@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TPButton: View {
+    private var tapButtonAction: VoidHandler?
     struct Config {
         let title: String
         let action: VoidHandler?
@@ -30,13 +31,14 @@ struct TPButton: View {
         case deepColorButton
         case textButton
     }
-    
+
     let config: Config
     let style: Style
     
-    init(config: Config, style: Style) {
+    init(config: Config, style: Style, buttonTapped: VoidHandler? = nil) {
         self.config = config
         self.style = style
+        self.tapButtonAction = buttonTapped
     }
     
     var body: some View {
@@ -81,10 +83,19 @@ struct TPButton: View {
             .frame(height: 24)
             .font(.gilroyMedium14)
             .bold()
+            .onTapGesture {
+                tapAction()
+                action()
+            }
     }
     
     private func action() {
         guard let action = config.action else { return }
+        action()
+    }
+    
+    private func tapAction() {
+        guard let action = tapButtonAction else { return }
         action()
     }
     
