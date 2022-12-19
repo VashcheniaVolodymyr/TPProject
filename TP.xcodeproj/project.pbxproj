@@ -19,6 +19,7 @@
 		AF99E76A292414B4008D6942 /* TPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99E769292414B4008D6942 /* TPUITestsLaunchTests.swift */; };
 		AFB33BAE292BB94F00C2B607 /* Image+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB33BAD292BB94F00C2B607 /* Image+Extension.swift */; };
 		AFCD5B4E29359D6500214515 /* View+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD5B4D29359D6500214515 /* View+Extensions.swift */; };
+		AFCD5B5029366D4E00214515 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCD5B4F29366D4E00214515 /* ListItem.swift */; };
 		AFD17794292A886A0060B6F2 /* TPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD17793292A886A0060B6F2 /* TPButton.swift */; };
 		AFD17798292A8D500060B6F2 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD17797292A8D500060B6F2 /* Color+Extension.swift */; };
 		AFD1779A292A97530060B6F2 /* Options+Nullable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD17799292A97530060B6F2 /* Options+Nullable.swift */; };
@@ -63,6 +64,7 @@
 		AF99E769292414B4008D6942 /* TPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AFB33BAD292BB94F00C2B607 /* Image+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Extension.swift"; sourceTree = "<group>"; };
 		AFCD5B4D29359D6500214515 /* View+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extensions.swift"; sourceTree = "<group>"; };
+		AFCD5B4F29366D4E00214515 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		AFD17793292A886A0060B6F2 /* TPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TPButton.swift; sourceTree = "<group>"; };
 		AFD17797292A8D500060B6F2 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		AFD17799292A97530060B6F2 /* Options+Nullable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Options+Nullable.swift"; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			children = (
 				AFEAF6C9292427AB00FD25E9 /* TPIconTextField.swift */,
 				AFD17793292A886A0060B6F2 /* TPButton.swift */,
+				AFCD5B4F29366D4E00214515 /* ListItem.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				AF3CF76F292D5BF700DBDADC /* Constants.swift in Sources */,
 				AFE4A6792933E640001CD4A0 /* CharacterSceneViewModel.swift in Sources */,
 				AFD17794292A886A0060B6F2 /* TPButton.swift in Sources */,
+				AFCD5B5029366D4E00214515 /* ListItem.swift in Sources */,
 				AFD17798292A8D500060B6F2 /* Color+Extension.swift in Sources */,
 				AF99E74F292414B3008D6942 /* SignInScene.swift in Sources */,
 				AF99E74D292414B3008D6942 /* TPApp.swift in Sources */,

@@ -4,10 +4,8 @@
 //
 //  Created by Developer on 22.11.2022.
 //
-
-import Foundation
-import Combine
 import SwiftUI
+import Combine
 
 enum SingInState {
     case signIn

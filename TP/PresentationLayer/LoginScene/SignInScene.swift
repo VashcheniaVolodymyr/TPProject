@@ -21,10 +21,10 @@ protocol SingInSceneVMP: ObservableObject {
 }
 
 struct SingInScene<ViewModel: SingInSceneVMP>: View {
+    @ObservedObject var viewModel: ViewModel
+    
     @Namespace private var animation
     @State private var isFlipped = false
-    
-    @ObservedObject var viewModel: ViewModel
     
     var body: some View {
         ZStack {

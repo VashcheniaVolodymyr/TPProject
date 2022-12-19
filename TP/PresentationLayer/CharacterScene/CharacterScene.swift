@@ -42,7 +42,7 @@ struct CharacterScene<ViewModel: CharacterSceneVPM>: View {
                                 Image.passwordIconInDisabled
                                     .foregroundColor(.blue)
                             })
-                            .tag(1)
+                            .tag(2)
                     }
                 }
                 Spacer()
